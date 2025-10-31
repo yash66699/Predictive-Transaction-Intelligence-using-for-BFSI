@@ -1,0 +1,596 @@
+/* Settings Page Styles */
+html {
+    height: 100%;
+    
+    margin: 0;
+    padding: 0;
+    background: #F8F5F0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f3e6d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+
+.settings-container {
+    background: #FFF7EA;
+    border: 3px solid #0a0a0a;
+    color: #000000;
+    width: 100%;
+    max-width: 800px;
+    height: auto; /* remove fixed height to avoid extra bottom space */
+    max-height: 90vh;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 50px rgba(193, 154, 107, 0.25);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.settings-body {
+    flex: 0 1 auto; /* don't stretch to fill unused space */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(193, 154, 107, 0.6) #FFF7EA;
+    padding: 24px;
+    background: #33250d;
+}
+
+.settings-body::-webkit-scrollbar {
+    width: 6px;
+    background: #33250d;
+}
+
+.settings-body::-webkit-scrollbar-track {
+    background: #FFF7EA;
+}
+
+.settings-body::-webkit-scrollbar-thumb {
+    background: rgba(9, 8, 8, 0.6);
+    border-radius: 3px;
+}
+
+.settings-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(166, 124, 82, 0.8);
+}
+
+.settings-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.settings-body::-webkit-scrollbar-track {
+    background: #FFF7EA;
+}
+
+.settings-body::-webkit-scrollbar-thumb {
+    background: #01010199;
+    border-radius: 3px;
+}
+
+.settings-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(166, 124, 82, 0.8);
+}
+
+.settings-header {
+    border-bottom: 3px solid rgba(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background: #EBD8C3;
+    z-index: 10;
+}
+
+.settings-header h2 {
+    font-size: 24px;
+    color: #000000;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.settings-header h2 i,
+.settings-section h3 i {
+    color: #7B5A3A;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #7B5A3A;
+    font-size: 28px;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: rgba(193, 154, 107, 0.2);
+    color: #7B5A3A;
+}
+
+.settings-body {
+    padding: 24px;
+}
+
+.settings-body {
+    padding: 24px !important;
+}
+
+.settings-section {
+    margin-bottom: 24px;
+    background: rgba(193, 154, 107, 0.12) !important;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(193, 154, 107, 0.5);
+}
+
+.settings-section {
+    margin-bottom: 24px;
+    background: rgba(193, 154, 107, 0.12) !important;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(193, 154, 107, 0.5);
+}
+
+.settings-section h3 {
+    font-size: 22px;
+    margin: 0 0 24px 0;
+    color: hsl(180, 33%, 1%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.settings-section h3 i {
+    font-size: 24px;
+}
+
+.settings-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Override dashboard profile-card styles inside settings to camel/off-white theme */
+.settings-section.profile-card {
+    background: #FFF7EA !important; /* off-white card background */
+    border: 1px solid #C19A6B !important; /* camel border */
+    box-shadow: 0 4px 14px rgba(193, 154, 107, 0.12) !important;
+}
+
+/* Remove blue/purple animated border from shared profile modal styles when used for Settings */
+.settings-container.profile-modal-content::before {
+    content: none !important;
+}
+
+.settings-container.profile-modal-content {
+    background: #FFF7EA !important;
+    border: 1px solid #C19A6B !important;
+    box-shadow: 0 0 50px rgba(193, 154, 107, 0.25) !important;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: rgba(72, 46, 10, 0.5);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.setting-info {
+    flex: 1;
+}
+
+.setting-info h4 {
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    color: hwb(0 0% 100%);
+}
+
+.setting-info p {
+    font-size: 14px;
+    margin: 0;
+    color: #090808b3;
+}
+
+.setting-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Toggle Switch */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 26px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color:#422403;
+}
+
+input:disabled + .slider {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Dropdown */
+.dropdown {
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: rgba(27, 32, 52, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 14px;
+    min-width: 120px;
+}
+
+.dropdown:focus {
+    outline: none;
+    border-color: #422403;
+}
+
+/* Status Badge */
+.status-enabled {
+    background: rgba(21, 13, 0, 0.2);
+    color: #fffffe;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Change Password Button */
+.change-password-btn {
+    background: rgba(73, 47, 8, 0.2);
+    color: #fefeff;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.change-password-btn:hover {
+    background: rgba(99, 102, 241, 0.3);
+}
+
+/* Password Change Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: rgba(27, 32, 52, 0.95);
+    margin: 15% auto;
+    padding: 24px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    background: rgba(35, 41, 70, 0.5);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.cancel-btn,
+.save-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn {
+    background: rgba(242, 183, 139, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.save-btn {
+    background: rgba(52, 211, 153, 0.2);
+    color: #422403;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.cancel-btn:hover {
+    background: rgba(239, 68, 68, 0.3);
+}
+
+.save-btn:hover {
+    background: rgba(52, 211, 153, 0.3);
+}
+
+/* Application Settings Styles */
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.cancel-settings-btn,
+.save-settings-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-settings-btn {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.cancel-settings-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.save-settings-btn {
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.save-settings-btn:hover {
+    background: rgba(99, 102, 241, 0.2);
+}
+
+/* Data Management Styles */
+.data-actions .setting-control {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: nowrap;
+    min-width: 280px;
+}
+
+.data-buttons {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.export-data-btn,
+.delete-data-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: 135px;
+    justify-content: center;
+}
+
+.export-data-btn {
+    background: rgba(52, 211, 153, 0.1);
+    color: #422403;
+    border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.export-data-btn:hover {
+    background: rgb(250, 250, 250);
+}
+
+.delete-data-btn {
+    background: rgba(255, 255, 254);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.delete-data-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.data-buttons i {
+    font-size: 18px;
+}
+
+/* Delete Confirmation Modal */
+.delete-confirm-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.delete-confirm-content {
+    position: relative;
+    background: rgba(27, 32, 52, 0.95);
+    margin: 15% auto;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    text-align: center;
+}
+
+.delete-confirm-content h3 {
+    color: #ef4444;
+    margin-bottom: 16px;
+}
+
+.delete-confirm-content p {
+    margin-bottom: 24px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.delete-confirm-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: rgba(52, 211, 153, 0.9);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Back to Dashboard Button */
+.back-to-dashboard {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+}
+
+.back-to-dashboard a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #422403;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(7, 8, 8, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.back-to-dashboard a:hover {
+    background: rgba(52, 211, 153, 0.2);
+    transform: translateY(-2px);
+}
+
+.back-to-dashboard i {
+    font-size: 20px;
+}

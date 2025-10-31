@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Fraud Detection System</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="settings.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="settings-container profile-modal-content">
+            <div class="settings-header profile-modal-header">
+                <h2><i class='bx bxs-cog'></i> Settings</h2>
+                <button class="close-btn" onclick="window.location.href='dashboard.html'">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            <div class="settings-body profile-modal-body">
+                <!-- Notification Preferences Section -->
+                <div class="settings-section profile-card">
+                    <h3><i class='bx bx-bell'></i> Notification Preferences</h3>
+                <div class="settings-items">
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Fraud Alerts</h4>
+                            <p>Receive notifications when suspicious activities are detected</p>
+                        </div>
+                        <div class="setting-control">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Email Notifications</h4>
+                            <p>Get important updates and alerts via email</p>
+                        </div>
+                        <div class="setting-control">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>High-Risk Alerts</h4>
+                            <p>Get notified of high-risk transactions immediately</p>
+                        </div>
+                        <div class="setting-control">
+                            <label class="toggle">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Alert Threshold</h4>
+                            <p>Set the sensitivity level for fraud detection alerts</p>
+                        </div>
+                        <div class="setting-control">
+                            <select class="dropdown">
+                                <option value="low">Low</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security & Privacy Section -->
+            <div class="settings-section profile-card">
+                <h3><i class='bx bx-shield-quarter'></i> Security & Privacy</h3>
+                <div class="settings-items">
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Two-Factor Authentication</h4>
+                            <p>Add an extra layer of security to your account</p>
+                        </div>
+                        <div class="setting-control">
+                            <span class="status-enabled">Enabled</span>
+                        </div>
+                    </div>
+
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Session Timeout</h4>
+                            <p>Automatically log out after period of inactivity</p>
+                        </div>
+                        <div class="setting-control">
+                            <select class="dropdown">
+                                <option value="15">15 minutes</option>
+                                <option value="30" selected>30 minutes</option>
+                                <option value="60">1 hour</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Login Notifications</h4>
+                            <p>Get notified of new login attempts</p>
+                        </div>
+                        <div class="setting-control">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Change Password</h4>
+                            <p>Update your account password</p>
+                        </div>
+                        <div class="setting-control">
+                            <button class="change-password-btn">Update Password</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Management Section -->
+            <div class="settings-section profile-card">
+                <h3><i class='bx bx-data'></i> Data Management</h3>
+                <div class="settings-items">
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Auto-backup</h4>
+                            <p>Automatically backup transaction data</p>
+                        </div>
+                        <div class="setting-control">
+                            <label class="toggle">
+                                <input type="checkbox" id="autoBackupToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Data Retention</h4>
+                            <p>How long to keep transaction history</p>
+                        </div>
+                        <div class="setting-control">
+                            <select class="dropdown" id="dataRetentionSelect">
+                                <option value="3">3 months</option>
+                                <option value="6" selected>6 months</option>
+                                <option value="12">12 months</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-item data-actions">
+                        <div class="setting-info">
+                            <h4>Data Actions</h4>
+                            <p>Export or delete your transaction data</p>
+                        </div>
+                        <div class="setting-control data-buttons">
+                            <button class="export-data-btn">
+                                <i class='bx bx-export'></i>
+                                Export Data
+                            </button>
+                            <button class="delete-data-btn">
+                                <i class='bx bx-trash'></i>
+                                Delete All Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Settings Section -->
+            <div class="settings-section profile-card">
+                <h3><i class='bx bx-cog'></i> Application Settings</h3>
+                <div class="settings-items">
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Language</h4>
+                            <p>Choose your preferred language</p>
+                        </div>
+                        <div class="setting-control">
+                            <select class="dropdown" id="languageSelect">
+                                <option value="en" selected>English</option>
+                                <option value="hi">Hindi</option>
+                                <option value="bn">Bengali</option>
+                                <option value="te">Telugu</option>
+                                <option value="ta">Tamil</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Timezone</h4>
+                            <p>Set your local timezone</p>
+                        </div>
+                        <div class="setting-control">
+                            <select class="dropdown" id="timezoneSelect">
+                                <option value="IST" selected>(GMT+5:30) India Standard Time</option>
+                                <option value="UTC">UTC - Coordinated Universal Time</option>
+                                <option value="EST">(GMT-5:00) Eastern Standard Time</option>
+                                <option value="PST">(GMT-8:00) Pacific Standard Time</option>
+                                <option value="JST">(GMT+9:00) Japan Standard Time</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Dark Mode</h4>
+                            <p>Switch between light and dark theme</p>
+                        </div>
+                        <div class="setting-control">
+                            <label class="toggle">
+                                <input type="checkbox" id="darkModeToggle" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-item">
+                        <div class="setting-info">
+                            <h4>Compact Layout</h4>
+                            <p>Use a more condensed interface</p>
+                        </div>
+                        <div class="setting-control">
+                            <label class="toggle">
+                                <input type="checkbox" id="compactLayoutToggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-actions">
+                        <button class="cancel-settings-btn">Cancel</button>
+                        <button class="save-settings-btn">Save All Settings</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <h3>Change Password</h3>
+            <form id="changePasswordForm">
+                <div class="form-group">
+                    <label>Current Password</label>
+                    <input type="password" id="currentPassword" required>
+                </div>
+                <div class="form-group">
+                    <label>New Password</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirm New Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="save-btn">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="../templates/firebase-config.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>
