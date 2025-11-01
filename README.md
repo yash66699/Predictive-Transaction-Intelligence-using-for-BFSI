@@ -638,7 +638,7 @@ MIT License © 2025 - See [LICENSE](LICENSE) file for details.
 - 📖 **Docs**: Check [INSTALLATION.md](INSTALLATION.md)
 - 🐛 **Issues**: [Report on GitHub](https://github.com/yash66699/Predictive-Transaction-Intelligence-using-for-BFSI/issues)
 - 💬 **Discussions**: [Start a discussion](https://github.com/yash66699/Predictive-Transaction-Intelligence-using-for-BFSI/discussions)
-- 📧 **Email**: your-email@example.com
+- 📧 **Email**: yashwanthreddydooreddy@gmail.com 
 
 ---
 
