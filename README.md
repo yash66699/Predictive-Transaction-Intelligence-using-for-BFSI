@@ -148,9 +148,9 @@ Perfect for **banks, fintech companies, and financial institutions** looking for
 
 ```
 ┌─────────────────────────────────────────┐
-│          USER INTERFACES                 │
+│          USER INTERFACES                │
 ├─────────────────────────────────────────┤
-│ Landing │ Auth │ Interactive Dashboard   │
+│ Landing │ Auth │ Interactive Dashboard  │
 └────────────────┬────────────────────────┘
                  │
       ┌──────────┴──────────┐
@@ -170,7 +170,7 @@ Perfect for **banks, fintech companies, and financial institutions** looking for
      ▼                     ▼
 ┌──────────────┐    ┌──────────────┐
 │  FastAPI     │    │  Services    │
-│  (24 Routes)  │    │  (Business   │
+│  (24 Routes) │    │  (Business   │
 └──────────────┘    │   Logic)     │
      │              └──────────────┘
      │                     │
